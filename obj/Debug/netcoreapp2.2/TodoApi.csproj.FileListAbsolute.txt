@@ -1,0 +1,14 @@
+/home/dranzer/Downloads/todo/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.deps.json
+/home/dranzer/Downloads/todo/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.runtimeconfig.json
+/home/dranzer/Downloads/todo/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.runtimeconfig.dev.json
+/home/dranzer/Downloads/todo/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.dll
+/home/dranzer/Downloads/todo/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.pdb
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.csprojAssemblyReference.cache
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.csproj.CoreCompileInputs.cache
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.RazorAssemblyInfo.cache
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.RazorAssemblyInfo.cs
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.AssemblyInfoInputs.cache
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.AssemblyInfo.cs
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.RazorTargetAssemblyInfo.cache
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.dll
+/home/dranzer/Downloads/todo/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.pdb

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To-do App</title>
+    <style>
+        .center {
+            text-align: center;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .left {
+            text-align: left;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .form-style-6{
+            font: 95% Arial, Helvetica, sans-serif;
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 16px;
+            background: linear-gradient(45deg, #49a09d, #5f2c82);
+        }
+        .form-style-6 h1{
+            background: #43D1AF;
+            padding: 20px 0;
+            font-size: 140%;
+            font-weight: 300;
+            text-align: center;
+            color: #fff;
+            margin: -16px -16px 16px -16px;
+        }
+        .form-style-6 input[type="text"],
+        .form-style-6 textarea,
+        .form-style-6 select 
+        {
+            outline: none;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            background: #fff;
+            margin-bottom: 4%;
+            border: 1px solid #ccc;
+            padding: 3%;
+            color: #555;
+            font: 95% Arial, Helvetica, sans-serif;
+        }
+        .form-style-6 input[type="text"]:focus,
+        .form-style-6 textarea:focus,
+        .form-style-6 select:focus
+        {
+            box-shadow: 0 0 5px #43D1AF;
+            padding: 3%;
+            border: 1px solid #43D1AF;
+        }
+
+        .form-style-6 input[type="submit"],
+        .form-style-6 input[type="button"]{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            padding: 3%;
+            background: #43D1AF;
+            border-bottom: 2px solid #30C29E;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;	
+            color: #fff;
+            font-size: 125%;
+        }
+        .form-style-6 input[type="submit"]:hover,
+        .form-style-6 input[type="button"]:hover{
+            background: #2EBC99;
+        }
+
+        .form-style-7{
+            font: 95% Arial, Helvetica, sans-serif;
+            max-width: 400px;
+            margin: 300px auto;
+            padding: 16px;
+            background: linear-gradient(45deg, #49a09d, #5f2c82);
+        }
+        .form-style-7 h1{
+            background: #43D1AF;
+            padding: 20px 0;
+            font-size: 140%;
+            font-weight: 300;
+            text-align: center;
+            color: #fff;
+            margin: -16px -16px 16px -16px;
+        }
+        .form-style-7 input[type="text"],
+        .form-style-7 textarea,
+        .form-style-7 select 
+        {
+            outline: none;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            background: #fff;
+            margin-bottom: 4%;
+            border: 1px solid #ccc;
+            padding: 3%;
+            color: #555;
+            font: 95% Arial, Helvetica, sans-serif;
+        }
+        .form-style-7 input[type="text"]:focus,
+        .form-style-7 textarea:focus,
+        .form-style-7 select:focus
+        {
+            box-shadow: 0 0 5px #43D1AF;
+            padding: 3%;
+            border: 1px solid #43D1AF;
+        }
+
+        .form-style-7 input[type="submit"],
+        .form-style-7 input[type="button"]{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            padding: 3%;
+            background: #43D1AF;
+            border-bottom: 2px solid #30C29E;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;	
+            color: #fff;
+            font-size: 125%;
+        }
+        .form-style-7 input[type="submit"]:hover,
+        .form-style-7 input[type="button"]:hover{
+            background: #2EBC99;
+        }
+
+        #spoiler {
+            display: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(45deg, #49a09d, #5f2c82);
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        table {
+            width: 800px;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            background-color: rgba(255,255,255,0.2);
+            color: rgb(238, 230, 230);
+        }
+
+        th {
+	        text-align: left;
+        }
+
+        button {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            padding: 3%;
+            background: #43D1AF;
+            border-bottom: 2px solid #30C29E;
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;	
+            color: #fff;
+            font-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>To-do App</h1>
+        <form action="javascript:void(0);" method="POST" onsubmit="addItem()" class="form-style-6">
+            <input type="text" id="add-name" placeholder="New to-do">
+            <input type="text" id="add-desc" placeholder="New description">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+
+    <div class="center">
+        <h2 id="counter"></h2>
+    </div>
+
+    <div class="container">
+        <table>
+            <thead>
+                <th>Is Complete</th>
+                <th>Name</th>
+                <th>Desc</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody id="todos"></tbody>
+        </table>
+    </div>
+
+    <div class="center">
+        <div id="spoiler">
+            <h2>Edit</h2>
+            <form class="my-form, form-style-7">
+                <input type="hidden" id="edit-id">
+                <input type="checkbox" id="edit-isComplete">
+                <input type="text" id="edit-name">
+                <input type="text" id="edit-desc">
+                <input type="submit" value="Save">
+                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="site.js"></script>
+</body>
+</html>
